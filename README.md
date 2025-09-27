@@ -1,8 +1,28 @@
-# BankingApp
+# 💰 Banking App
 
 A modern **full-stack banking application**. 
 
 This project is being built step by step, starting from a minimal skeleton and evolving into a production-like system.
+
+## 🔄 Running the App
+
+> Backend
+```bash
+cd backend
+./mvnw spring-boot:run
+```
+- Runs on: http://localhost:8080
+
+> Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+```
+- Runs on: http://localhost:5173
+
+
+<br>
 
 
 ## 🟢 Current Features
@@ -11,7 +31,7 @@ This project is being built step by step, starting from a minimal skeleton and e
 - Frontend successfully calls a backend API (`/api/hello`) and displays the response
 - Basic CORS configuration between frontend (`5173`) and backend (`8080`)
 
-
+<br>
 
 ## ✏️ Architecture
 
@@ -22,7 +42,10 @@ This project is being built step by step, starting from a minimal skeleton and e
     
 </details>
 
-### 🧰 Tech Stack
+<br>
+<br>
+
+## 🧰 Tech Stack
 
 - Frontend
     - React (with Vite + TypeScript)
@@ -42,25 +65,11 @@ This project is being built step by step, starting from a minimal skeleton and e
     - Unit + integration tests
 
 
-### 🔄 Running the App
+<br>
 
-> Backend
-```bash
-cd bankapp-backend
-./mvnw spring-boot:run
-```
-- Runs on: http://localhost:8080
+---
 
-> Frontend
-```bash
-cd bankapp-frontend
-npm install
-npm run dev
-```
-- Runs on: http://localhost:5173
-
-
-📈 Roadmap
+### 📈 Roadmap
 - Hello World API + frontend integration
 - Mock User API endpoint
 - Connect to PostgreSQL
