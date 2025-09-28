@@ -6,6 +6,16 @@ This project is currently being built step by step, starting from a minimal skel
 
 <br>
 
+## 🔧 Getting Started
+
+- Java 17+ (Spring Boot backend)
+- Maven
+- Node.js 18+ and npm
+- Docker (running PostgreSQL locally)
+
+
+<br>
+
 ## 🔄 Running the App
 
 #### Docker | PostgreSQL
@@ -50,16 +60,18 @@ npm run dev
 <!-- Entry 1 -->
 <details>
 <summary>Phase 1</summary>
+Base project structure, including initialising the front and backend, and ensuring they're communicating with each other.
 
-![Architecture Diagram](frontend/public/images/architecture/27.09.2025.png)
+![Architecture Diagram](docs/architecture/arch_phase1.png)
 
 </details>
 
 <!-- Entry 2-->
 <details>
 <summary>Phase 2</summary>
+Configure PostgreSQL inside a Docker container. Add Lombok to the `BankUser` entity to reduce boilderplate code. Test POST and GET endpoints work in Postman and are reflected in the DB using DBeaver. 
 
-![Architecture Diagram](frontend/public/images/architecture/28.09.2025.png)
+![Architecture Diagram](docs/architecture/arch_phase2.png)
 
 </details>
 
@@ -93,7 +105,7 @@ npm run dev
 
 <br>
 
-## 🧭 Roadmap
+## 🗺️ Roadmap
 
 - Add banking services
 - Add authentication (JWT)
