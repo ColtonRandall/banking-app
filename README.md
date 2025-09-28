@@ -1,45 +1,66 @@
 # 💰 Banking App
 
-A modern **full-stack banking application**. 
+A modern **full-stack banking application**.
 
-This project is being built step by step, starting from a minimal skeleton and evolving into a production-like system.
+This project is currently being built step by step, starting from a minimal skeleton and evolving into a production-like system.
+
+<br>
 
 ## 🔄 Running the App
 
-> Backend
+#### Docker | PostgreSQL
+
+```bash
+docker compose up -d
+```
+
+#### Backend
+
 ```bash
 cd backend
 ./mvnw spring-boot:run
 ```
-- Runs on: http://localhost:8080
 
-> Frontend
+> Runs on: http://localhost:8080
+
+#### Frontend
+
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
-- Runs on: http://localhost:5173
 
+> Runs on: http://localhost:5173
 
 <br>
 
-
 ## 🟢 Current Features
+
 - **Spring Boot backend** (Java 17+, REST API)
 - **React frontend** (Vite + TypeScript)
-- Frontend successfully calls a backend API (`/api/hello`) and displays the response
-- Basic CORS configuration between frontend (`5173`) and backend (`8080`)
+- Frontend successfully calls a backend API (`/api/users`) and displays the response
+  - API (/api/users) fully functional (POST / GET) for retrieving bank users.
+- PostgreSQL database integration via Docker
 
 <br>
 
 ## ✏️ Architecture
 
+<!-- Entry 1 -->
 <details>
-<summary>Current State - Sept 2025</summary>
+<summary>Phase 1</summary>
 
 ![Architecture Diagram](frontend/public/images/architecture/27.09.2025.png)
-    
+
+</details>
+
+<!-- Entry 2-->
+<details>
+<summary>Phase 2</summary>
+
+![Architecture Diagram](frontend/public/images/architecture/28.09.2025.png)
+
 </details>
 
 <br>
@@ -48,33 +69,34 @@ npm run dev
 ## 🧰 Tech Stack
 
 - Frontend
-    - React (with Vite + TypeScript)
-    - Fetch API for backend communication
+
+  - React (with Vite + TypeScript)
+  - Fetch API for backend communication
 
 - Backend
-    - Java 17+
-    - Spring Boot
-    - REST API
+
+  - Java 17+
+  - Spring Boot
+  - REST API
+  - Hibernate / JPA ORM
+
+- Database
+
+  - PostgreSQL (Dockerized)
+  - Persistent volume for data
 
 - Future Stack Additions
-    - PostgreSQL database
-    - JWT authentication
-    - Docker + Docker Compose
-    - GitHub Actions CI/CD
-    - Cloud deployment
-    - Unit + integration tests
-
+  - JWT authentication
+  - GitHub Actions CI/CD
+  - Cloud deployment
+  - Unit + integration tests
 
 <br>
 
----
+## 🧭 Roadmap
 
-### 📈 Roadmap
-- Hello World API + frontend integration
-- Mock User API endpoint
-- Connect to PostgreSQL
+- Add banking services
 - Add authentication (JWT)
-- Dockerize services
 - Implement CI/CD pipeline
 - Write automated tests
 - Extend domain (accounts, transactions, etc.)

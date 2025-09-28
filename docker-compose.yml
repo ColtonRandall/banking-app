@@ -1,0 +1,19 @@
+# To run: 
+# docker compose up -d
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: bankingapp-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: bankapp_user
+      POSTGRES_PASSWORD: password123
+      POSTGRES_DB: banking_app
+    ports:
+      - "5432:5432" # map local : container port
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # postgres_data = docker volume. Persists data even when container is stopped/restarted.
+
+volumes:
+  postgres_data:
