@@ -25,4 +25,20 @@ public class UserController {
     public List<BankUser> getAllUsers() {
         return userRepository.findAll();
     }
+
+    @GetMapping("/{id}")
+    public BankUser getUserById(@PathVariable Long id) {
+        return userRepository.findById(id).orElse(null);
+    }
+
+    @DeleteMapping("/{id}")
+    public String deleteUser(@PathVariable Long id) {
+        if (userRepository.existsById(id)) {
+            userRepository.deleteById(id);
+            return "User with ID " + id + " deleted successfully.";
+        }
+        else {
+            return "User does not exist.";
+        }
+    }
 }
