@@ -7,10 +7,6 @@ import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
-/**
- * User model representing a user in the banking application.
- */
-
 @Setter
 @Getter
 @Entity

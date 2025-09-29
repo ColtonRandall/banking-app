@@ -1,7 +1,7 @@
 package com.bankingapp.backend.controller;
 
 import com.bankingapp.backend.model.BankUser;
-import com.bankingapp.backend.repository.UserRepository;
+import com.bankingapp.backend.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,35 +10,29 @@ import java.util.List;
 @RequestMapping("/api/users")
 public class UserController {
 
-    private final UserRepository userRepository;
+    private final UserService userService;
 
-    public UserController(UserRepository userRepository) {
-        this.userRepository = userRepository;
+    public UserController(UserService userService) {
+        this.userService = userService;
     }
 
     @PostMapping
     public BankUser createUser(@RequestBody BankUser bankUser) {
-        return userRepository.save(bankUser);
+        return userService.createUser(bankUser);
     }
 
     @GetMapping
     public List<BankUser> getAllUsers() {
-        return userRepository.findAll();
+        return userService.getAllUsers();
     }
 
     @GetMapping("/{id}")
     public BankUser getUserById(@PathVariable Long id) {
-        return userRepository.findById(id).orElse(null);
+        return userService.getUserById(id);
     }
 
     @DeleteMapping("/{id}")
     public String deleteUser(@PathVariable Long id) {
-        if (userRepository.existsById(id)) {
-            userRepository.deleteById(id);
-            return "User with ID " + id + " deleted successfully.";
-        }
-        else {
-            return "User does not exist.";
-        }
+        return userService.deleteUser(id);
     }
 }
