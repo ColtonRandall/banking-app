@@ -16,11 +16,6 @@ public class UserController {
         this.userService = userService;
     }
 
-    @PostMapping
-    public BankUser createUser(@RequestBody BankUser bankUser) {
-        return userService.createUser(bankUser);
-    }
-
     @GetMapping
     public List<BankUser> getAllUsers() {
         return userService.getAllUsers();
@@ -29,6 +24,12 @@ public class UserController {
     @GetMapping("/{id}")
     public BankUser getUserById(@PathVariable Long id) {
         return userService.getUserById(id);
+    }
+
+    @PostMapping
+    public BankUser createUser(@RequestBody BankUser bankUser) {
+        System.out.println("Received user: " + bankUser.getName() + ", " + bankUser.getEmail());
+        return userService.createUser(bankUser);
     }
 
     @DeleteMapping("/{id}")
