@@ -27,7 +27,7 @@ public class BankAccountService {
         if(bankAccount.getBalance() < 0) {
             throw new IllegalArgumentException("Initial balance cannot be negative.");
         }
-        if(bankAccount.getUser().equals(null)) {
+        if(bankAccount.getUser() == null) {
             throw new IllegalArgumentException("Bank user does not exist.");
         }
 

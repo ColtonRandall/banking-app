@@ -1,7 +1,9 @@
 package com.bankingapp.backend.controller;
 
 import com.bankingapp.backend.model.BankAccount;
+import com.bankingapp.backend.model.BankUser;
 import com.bankingapp.backend.service.BankAccountService;
+import com.bankingapp.backend.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,8 +13,10 @@ import java.util.List;
 public class BankAccountController {
 
     private final BankAccountService bankAccountService;
+    private final UserService bankUserService;
 
-    public BankAccountController(BankAccountService bankAccountService) {
+    public BankAccountController(BankAccountService bankAccountService, UserService bankUserService) {
+        this.bankUserService = bankUserService;
         this.bankAccountService = bankAccountService;
     }
 
@@ -22,12 +26,19 @@ public class BankAccountController {
     }
 
     @GetMapping("/{id}")
-    public BankAccount getAccountById(@PathVariable Long id) {;
+    public BankAccount getAccountById(@PathVariable Long id) {
         return bankAccountService.getBankAccountById(id);
     }
 
     @PostMapping
     public BankAccount createAccount(@RequestBody BankAccount bankAccount) {
+
+        BankUser user = bankUserService.getUserById(bankAccount.getUser().getId());
+        if (user == null) {
+            throw new IllegalArgumentException("Bank user does not exist.");
+        }
+        bankAccount.setUser(user);
+
         System.out.println("Received account: " + bankAccount.getAccountNumber() + ", Balance: " + bankAccount.getBalance());
         return bankAccountService.createBankAccount(bankAccount);
     }
