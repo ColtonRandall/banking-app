@@ -28,11 +28,14 @@ public class UserService {
     }
 
     public String deleteUser(Long id) {
-        if (userRepository.existsById(id)) {
+        try {
+            if (!userRepository.existsById(id)) {
+                return "User with ID " + id + " does not exist.";
+            }
             userRepository.deleteById(id);
             return "User with ID " + id + " deleted successfully.";
-        } else {
-            return "User does not exist.";
+        } catch (Exception e) {
+            throw new RuntimeException("Could not delete user with ID " + id + ". " + e.getMessage());
         }
     }
 }
