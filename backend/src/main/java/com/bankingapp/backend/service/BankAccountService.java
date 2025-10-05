@@ -4,6 +4,7 @@ import com.bankingapp.backend.model.BankAccount;
 import com.bankingapp.backend.repository.BankAccountRepository;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -31,6 +32,8 @@ public class BankAccountService {
             throw new IllegalArgumentException("Bank user does not exist.");
         }
 
+        bankAccount.setAccountNumber(bankAccount.generateRandomAccountNumber());
+        bankAccount.setCreationDate(LocalDateTime.now());
         return bankAccountRepository.save(bankAccount);
     }
 

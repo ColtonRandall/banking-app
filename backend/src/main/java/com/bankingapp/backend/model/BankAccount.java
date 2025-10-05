@@ -1,6 +1,9 @@
 package com.bankingapp.backend.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
+
+import java.time.LocalDateTime;
 
 @Entity
 public class BankAccount {
@@ -8,10 +11,14 @@ public class BankAccount {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @JsonFormat(pattern = "dd-MM-yyyy HH:mm:ss")
+    private LocalDateTime creationDate;
+
     private String accountNumber;
     private Double balance;
     private String accountType;
-    private String creationDate;
+
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
@@ -21,12 +28,17 @@ public class BankAccount {
     public BankAccount() {
     }
 
-    public BankAccount(String accountNumber, Double balance, String accountType, String creationDate, BankUser user) {
+    public BankAccount(String accountNumber, Double balance, String accountType, LocalDateTime creationDate, BankUser user) {
         this.accountNumber = accountNumber;
         this.balance = balance;
         this.accountType = accountType;
         this.creationDate = creationDate;
         this.user = user;
+    }
+
+    public String generateRandomAccountNumber() {
+        int number = (int) (Math.random() * 1_000_000_000);
+        return String.format("%09d", number);
     }
 
     // Getters and Setters
@@ -62,11 +74,11 @@ public class BankAccount {
         this.accountType = accountType;
     }
 
-    public String getCreationDate() {
+    public LocalDateTime getCreationDate() {
         return creationDate;
     }
 
-    public void setCreationDate(String creationDate) {
+    public void setCreationDate(LocalDateTime creationDate) {
         this.creationDate = creationDate;
     }
 
