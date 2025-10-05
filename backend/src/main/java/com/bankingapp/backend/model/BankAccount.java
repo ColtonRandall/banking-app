@@ -15,9 +15,11 @@ public class BankAccount {
     @JsonFormat(pattern = "dd-MM-yyyy HH:mm:ss")
     private LocalDateTime creationDate;
 
+    @Enumerated(EnumType.STRING)
+    private AccountType accountType;
+
     private String accountNumber;
     private Double balance;
-    private String accountType;
 
 
     @ManyToOne
@@ -28,7 +30,7 @@ public class BankAccount {
     public BankAccount() {
     }
 
-    public BankAccount(String accountNumber, Double balance, String accountType, LocalDateTime creationDate, BankUser user) {
+    public BankAccount(String accountNumber, Double balance, AccountType accountType, LocalDateTime creationDate, BankUser user) {
         this.accountNumber = accountNumber;
         this.balance = balance;
         this.accountType = accountType;
@@ -66,11 +68,11 @@ public class BankAccount {
         this.balance = balance;
     }
 
-    public String getAccountType() {
+    public AccountType getAccountType() {
         return accountType;
     }
 
-    public void setAccountType(String accountType) {
+    public void setAccountType(AccountType accountType) {
         this.accountType = accountType;
     }
 

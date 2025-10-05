@@ -1,5 +1,6 @@
 package com.bankingapp.backend.controller;
 
+import com.bankingapp.backend.model.AccountType;
 import com.bankingapp.backend.model.BankAccount;
 import com.bankingapp.backend.model.BankUser;
 import com.bankingapp.backend.service.BankAccountService;
@@ -33,12 +34,19 @@ public class BankAccountController {
     @PostMapping
     public BankAccount createAccount(@RequestBody BankAccount bankAccount) {
 
+        // Validate user existence
         BankUser user = bankUserService.getUserById(bankAccount.getUser().getId());
         if (user == null) {
             throw new IllegalArgumentException("Bank user does not exist.");
         }
         bankAccount.setUser(user);
 
+        // Set default account type if not provided
+        if (bankAccount.getAccountType() == null) {
+            bankAccount.setAccountType(AccountType.SAVINGS);
+        }
+
+        // Log the received bank account details
         System.out.println("Received account: " + bankAccount.getAccountNumber() + ", Balance: " + bankAccount.getBalance());
         return bankAccountService.createBankAccount(bankAccount);
     }

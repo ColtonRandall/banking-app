@@ -32,6 +32,11 @@ public class BankAccountService {
             throw new IllegalArgumentException("Bank user does not exist.");
         }
 
+        // if invalid account type is provided, throw an error
+        if(bankAccount.getAccountType() == null) {
+            throw new IllegalArgumentException("Invalid account type.");
+        }
+
         bankAccount.setAccountNumber(bankAccount.generateRandomAccountNumber());
         bankAccount.setCreationDate(LocalDateTime.now());
         return bankAccountRepository.save(bankAccount);
