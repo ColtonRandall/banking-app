@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class BankUser {
+public class User {
 
     /*
         One-to-Many relationship with BankAccount.
@@ -28,10 +28,10 @@ public class BankUser {
     private String email;
 
     // Constructors
-    public BankUser() {
+    public User() {
     }
 
-    public BankUser(String name, String email) {
+    public User(String name, String email) {
         this.name = name;
         this.email = email;
     }

@@ -2,7 +2,7 @@ package com.bankingapp.backend.controller;
 
 import com.bankingapp.backend.model.AccountType;
 import com.bankingapp.backend.model.BankAccount;
-import com.bankingapp.backend.model.BankUser;
+import com.bankingapp.backend.model.User;
 import com.bankingapp.backend.service.BankAccountService;
 import com.bankingapp.backend.service.UserService;
 import org.springframework.web.bind.annotation.*;
@@ -35,7 +35,7 @@ public class BankAccountController {
     public BankAccount createAccount(@RequestBody BankAccount bankAccount) {
 
         // Validate user existence
-        BankUser user = bankUserService.getUserById(bankAccount.getUser().getId());
+        User user = bankUserService.getUserById(bankAccount.getUser().getId());
         if (user == null) {
             throw new IllegalArgumentException("Bank user does not exist.");
         }

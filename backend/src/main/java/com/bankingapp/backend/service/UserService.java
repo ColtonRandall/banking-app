@@ -1,6 +1,6 @@
 package com.bankingapp.backend.service;
 
-import com.bankingapp.backend.model.BankUser;
+import com.bankingapp.backend.model.User;
 import com.bankingapp.backend.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
@@ -15,15 +15,15 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public List<BankUser> getAllUsers() {
+    public List<User> getAllUsers() {
         return userRepository.findAll();
     }
 
-    public BankUser getUserById(Long id) {
+    public User getUserById(Long id) {
         return userRepository.findById(id).orElse(null);
     }
 
-    public BankUser createUser(BankUser bankUser) {
+    public User createUser(User bankUser) {
         return userRepository.save(bankUser);
     }
 

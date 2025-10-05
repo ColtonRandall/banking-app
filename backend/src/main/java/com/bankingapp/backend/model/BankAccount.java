@@ -24,13 +24,13 @@ public class BankAccount {
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
-    private BankUser user;
+    private User user;
 
     // Constructors
     public BankAccount() {
     }
 
-    public BankAccount(String accountNumber, Double balance, AccountType accountType, LocalDateTime creationDate, BankUser user) {
+    public BankAccount(String accountNumber, Double balance, AccountType accountType, LocalDateTime creationDate, User user) {
         this.accountNumber = accountNumber;
         this.balance = balance;
         this.accountType = accountType;
@@ -84,11 +84,11 @@ public class BankAccount {
         this.creationDate = creationDate;
     }
 
-    public BankUser getUser() {
+    public User getUser() {
         return user;
     }
 
-    public void setUser(BankUser user) {
+    public void setUser(User user) {
         this.user = user;
     }
 }
