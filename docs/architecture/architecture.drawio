@@ -1,55 +1,91 @@
 <mxfile host="65bd71144e">
     <diagram id="RhWfloWyu6QZI4z89tHF" name="Page-1">
-        <mxGraphModel dx="1181" dy="921" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1139" dy="921" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="4" style="edgeStyle=none;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="2" target="3" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="4" style="edgeStyle=none;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=-0.007;entryY=0.423;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="2" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="425" y="255" as="targetPoint"/>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="6" value="HTTP Fetch" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="4" vertex="1" connectable="0">
                     <mxGeometry x="-0.008" y="1" relative="1" as="geometry">
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="2" value="React Frontend&lt;div&gt;(Vite + TS) - 5173&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#26CBFF;" parent="1" vertex="1">
+                <mxCell id="2" value="React Frontend&lt;div&gt;(Vite + TS) - 5173&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#26CBFF;fontStyle=1" parent="1" vertex="1">
                     <mxGeometry x="60" y="240" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="5" style="edgeStyle=none;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="3" target="2" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="5" style="edgeStyle=none;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" parent="1" target="2" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="428" y="285" as="sourcePoint"/>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="7" value="JSON Response" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="5" vertex="1" connectable="0">
                     <mxGeometry x="0.168" y="-1" relative="1" as="geometry">
                         <mxPoint x="16" as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="16" value="JDBC / ORM" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="15">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="3" value="Spring Backend&lt;div&gt;(REST API) - 8080&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#35FF94;" parent="1" vertex="1">
-                    <mxGeometry x="430" y="240" width="120" height="60" as="geometry"/>
-                </mxCell>
-                <mxCell id="9" value="&amp;nbsp;PostgreSQL &lt;br&gt;DB&lt;br&gt;(Docker)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#FFCC99;" parent="1" vertex="1">
-                    <mxGeometry x="445" y="560" width="90" height="100" as="geometry"/>
-                </mxCell>
-                <mxCell id="13" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;strokeColor=#FF0000;" parent="1" vertex="1">
-                    <mxGeometry x="570" y="300" width="40" height="100" as="geometry"/>
-                </mxCell>
-                <mxCell id="14" value="&lt;pre&gt;&lt;b&gt;&lt;i&gt;&lt;font color=&quot;#ff0000&quot;&gt;Next steps - &lt;br/&gt;Add services&lt;/font&gt;&lt;/i&gt;&lt;/b&gt;&lt;/pre&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-                    <mxGeometry x="600" y="315" width="120" height="70" as="geometry"/>
-                </mxCell>
-                <mxCell id="18" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="15" target="9">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="490" y="555" as="targetPoint"/>
+                <mxCell id="16" value="JDBC / ORM" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" target="30" edge="1">
+                    <mxGeometry x="0.0112" relative="1" as="geometry">
+                        <mxPoint x="499" y="586" as="sourcePoint"/>
+                        <mxPoint x="499" y="647" as="targetPoint"/>
+                        <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="19" value="SQL Queries" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="18">
+                <mxCell id="28" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="24">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#35FF94;" parent="1" vertex="1">
+                    <mxGeometry x="430" y="179.5" width="137" height="181" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="&amp;nbsp;PostgreSQL &lt;br&gt;DB&lt;br&gt;(Docker)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#FFFFCC;" parent="1" vertex="1">
+                    <mxGeometry x="453.5" y="900" width="90" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="9" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="490" y="555" as="targetPoint"/>
+                        <mxPoint x="499" y="839" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" value="SQL Queries" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="18" vertex="1" connectable="0">
                     <mxGeometry x="-0.0117" y="-2" relative="1" as="geometry">
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="15" value="Hibernate / JPA" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFCC99;" vertex="1" parent="1">
-                    <mxGeometry x="430" y="400" width="120" height="60" as="geometry"/>
+                <mxCell id="20" value="&lt;span style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;&lt;b style=&quot;&quot;&gt;Spring Boot&lt;br&gt;Backend&lt;/b&gt;&lt;/span&gt;&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;&lt;span style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;&lt;b style=&quot;&quot;&gt;(REST API)&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="571" y="233" width="74" height="74" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="UserController&lt;div&gt;/api/users&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="438.5" y="199" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;BankAccountController&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;/api/accounts&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="438.5" y="276" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF9999;" vertex="1" parent="1">
+                    <mxGeometry x="430" y="404" width="137" height="181" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="&lt;b&gt;Services&lt;/b&gt;" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="567" y="457.5" width="74" height="74" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;UserService&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="438.5" y="423" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;BankAccountService&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="438.5" y="504" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="&lt;b&gt;Entities&amp;nbsp;&lt;/b&gt;&lt;div&gt;&lt;b&gt;(Hibernate / JPA)&lt;/b&gt;&lt;/div&gt;" style="text;strokeColor=none;align=center;fillColor=none;html=1;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="567" y="709.5" width="103" height="74" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFCC99;" vertex="1" parent="1">
+                    <mxGeometry x="430" y="656" width="137" height="181" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;BankUser&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="438.5" y="674" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;BankAccount&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="438.5" y="753" width="120" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
