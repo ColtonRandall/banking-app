@@ -1,7 +1,6 @@
 # 💰 Banking App
 
-<img src="https://github.com/coltonrandall/banking-app/workflows/Backend%20CI/badge.svg" alt="Backend CI" style="margin-right:15px">
-<img src=".github/badges/jacoco.svg" alt="Coverage">
+![Backend CI](https://github.com/coltonrandall/banking-app/workflows/Backend%20CI/badge.svg) &nbsp;&nbsp;&nbsp; ![Coverage](.github/badges/jacoco.svg)
 
 <br>
 
