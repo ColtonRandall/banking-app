@@ -1,8 +1,9 @@
 # 💰 Banking App
 
->![Backend CI](https://github.com/coltonrandall/banking-app/workflows/Backend%20CI/badge.svg) <br>
->![Coverage](.github/badges/jacoco.svg)
+<img src="https://github.com/coltonrandall/banking-app/workflows/Backend%20CI/badge.svg" alt="Backend CI" style="margin-right:15px">
+<img src=".github/badges/jacoco.svg" alt="Coverage">
 
+<br>
 
 A modern **full-stack banking application**.
 
@@ -16,7 +17,6 @@ This project is currently being built step by step, starting from a minimal skel
 - Maven
 - Node.js 18+ and npm
 - Docker (running PostgreSQL locally)
-
 
 <br>
 
@@ -61,12 +61,13 @@ This project uses GitHub Actions for continuous integration:
 ### Running Tests Locally
 
 **Backend:**
+
 ```bash
 cd backend
 mvn clean test
 ```
 
-> *Frontend CI/CD pipeline coming soon*
+> _Frontend CI/CD pipeline coming soon_
 
 <br>
 
@@ -95,7 +96,7 @@ Base project structure, including initialising the front and backend, and ensuri
 <!-- Phase 2-->
 <details>
 <summary>Phase 2</summary>
-Configure PostgreSQL inside a Docker container. Add Lombok to the `BankUser` entity to reduce boilderplate code. Test POST and GET endpoints work in Postman and are reflected in the DB using DBeaver. 
+Configure PostgreSQL inside a Docker container. Add Lombok to the `BankUser` entity to reduce boilderplate code. Test POST and GET endpoints work in Postman and are reflected in the DB using DBeaver.
 
 ![Architecture Diagram](docs/architecture/arch_phase2.png)
 
@@ -116,16 +117,19 @@ Added Controllers, Services and Entities for `BankUser` and `BankAccount`. Imple
 ## 🧰 Tech Stack
 
 - Frontend
+
   - React (with Vite + TypeScript)
   - Fetch API for backend communication
 
 - Backend
+
   - Java 17+
   - Spring Boot
   - REST API
   - Hibernate / JPA ORM
 
 - Database
+
   - PostgreSQL (Dockerized)
   - Persistent volume for data
 
