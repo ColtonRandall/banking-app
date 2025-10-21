@@ -1,5 +1,9 @@
 # 💰 Banking App
 
+![Backend CI](https://github.com/coltonrandall/banking-app/workflows/Backend%20CI/badge.svg)
+![Coverage](.github/badges/jacoco.svg)
+
+
 A modern **full-stack banking application**.
 
 This project is currently being built step by step, starting from a minimal skeleton and evolving into a production-like system.
@@ -42,6 +46,26 @@ npm run dev
 ```
 
 > Runs on: http://localhost:5173
+
+<br>
+
+## CI/CD Pipeline
+
+This project uses GitHub Actions for continuous integration:
+
+- **Backend CI**: Automatically builds and tests the Spring Boot application on every push to `backend/`
+- **Automated Testing**: Ensures code quality before merging pull requests
+- **Maven**: Java 17 with automated dependency caching
+
+### Running Tests Locally
+
+**Backend:**
+```bash
+cd backend
+mvn clean test
+```
+
+> *Frontend CI/CD pipeline coming soon*
 
 <br>
 
