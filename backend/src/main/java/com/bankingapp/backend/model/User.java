@@ -33,7 +33,6 @@ public class User {
     @Email(message = "Email must be valid")
     private String email;
 
-    // Constructors
     public User() {
     }
 
@@ -42,7 +41,6 @@ public class User {
         this.email = email;
     }
 
-    // Getters and Setters
     public List<BankAccount> getBankAccounts() {
         return bankAccounts;
     }
