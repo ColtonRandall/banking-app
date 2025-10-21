@@ -40,7 +40,7 @@ jobs:
           jacoco-csv-file: backend/target/site/jacoco/jacoco.csv
       
       - name: Log coverage percentage
-        run: echo "Coverage: ${{ steps.jacoco.outputs.coverage }}%"
+        run: echo "Coverage:${{ steps.jacoco.outputs.coverage }}%"
       
       - name: Commit badge
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
