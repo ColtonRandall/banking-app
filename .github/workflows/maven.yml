@@ -1,15 +1,19 @@
-name: Java CI with Maven
+name: Backend CI
 
 on:
   push:
-    branches: [ "main" ]
+    paths:
+      - 'backend/**'
   pull_request:
-    branches: [ "main" ]
+    paths:
+      - 'backend/**'
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    defaults:
+      run:
+        working-directory: backend
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -19,7 +23,6 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          cache: maven
 
-      - name: Build and run tests
+      - name: Build with Maven
         run: mvn -B clean verify
