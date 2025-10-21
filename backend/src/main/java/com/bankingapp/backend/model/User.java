@@ -2,6 +2,8 @@ package com.bankingapp.backend.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +26,11 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank(message = "Name is mandatory") // jakarta validation ensures name is not null or empty
     private String name;
+
+    @NotBlank(message = "Email is mandatory")
+    @Email(message = "Email must be valid")
     private String email;
 
     // Constructors

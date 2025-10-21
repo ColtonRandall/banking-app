@@ -5,6 +5,7 @@ import com.bankingapp.backend.model.BankAccount;
 import com.bankingapp.backend.model.User;
 import com.bankingapp.backend.service.BankAccountService;
 import com.bankingapp.backend.service.UserService;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -32,7 +33,7 @@ public class BankAccountController {
     }
 
     @PostMapping
-    public BankAccount createAccount(@RequestBody BankAccount bankAccount) {
+    public BankAccount createAccount(@Valid @RequestBody BankAccount bankAccount) {
 
         // Validate user existence
         User user = bankUserService.getUserById(bankAccount.getUser().getId());

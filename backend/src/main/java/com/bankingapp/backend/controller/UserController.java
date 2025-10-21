@@ -2,6 +2,7 @@ package com.bankingapp.backend.controller;
 
 import com.bankingapp.backend.model.User;
 import com.bankingapp.backend.service.UserService;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -27,7 +28,7 @@ public class UserController {
     }
 
     @PostMapping
-    public User createUser(@RequestBody User bankUser) {
+    public User createUser(@Valid @RequestBody User bankUser) {
         System.out.println("Received user: " + bankUser.getName() + ", " + bankUser.getEmail());
         return userService.createUser(bankUser);
     }

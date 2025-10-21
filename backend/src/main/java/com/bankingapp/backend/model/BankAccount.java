@@ -2,6 +2,9 @@ package com.bankingapp.backend.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 import java.time.LocalDateTime;
 
@@ -15,12 +18,16 @@ public class BankAccount {
     @JsonFormat(pattern = "dd-MM-yyyy HH:mm:ss")
     private LocalDateTime creationDate;
 
+    @NotNull(message = "Account type is mandatory")
     @Enumerated(EnumType.STRING)
     private AccountType accountType;
 
+    @NotBlank(message = "Account number is mandatory")
     private String accountNumber;
-    private Double balance;
 
+    @NotNull
+    @Min(value = 0, message = "Balance cannot be negative")
+    private Double balance;
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
@@ -42,6 +49,7 @@ public class BankAccount {
         int number = (int) (Math.random() * 1_000_000_000);
         return String.format("%09d", number);
     }
+
 
     // Getters and Setters
     public Long getId() {
