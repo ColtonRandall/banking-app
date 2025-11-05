@@ -1,6 +1,6 @@
 # 💰 Banking App
 
-![Backend CI](https://github.com/coltonrandall/banking-app/workflows/Backend%20CI/badge.svg) &nbsp;&nbsp;&nbsp; ![Coverage](.github/badges/jacoco.svg)
+![Backend CI](https://github.com/coltonrandall/banking-app/workflows/Backend%20CI/badge.svg) &nbsp;&nbsp;&nbsp; ![Coverage](.github/badges/jacoco.svg) &nbsp;&nbsp;&nbsp;![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 <br>
 
